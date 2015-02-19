@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3CA459DF4277FBDBBE65E8B4"
+               BuildableName = "SearchAlgorithm"
+               BlueprintName = "SearchAlgorithm"
+               ReferencedContainer = "container:SearchAlgorithm.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3CA459DF4277FBDBBE65E8B4"
+            BuildableName = "SearchAlgorithm"
+            BlueprintName = "SearchAlgorithm"
+            ReferencedContainer = "container:SearchAlgorithm.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
