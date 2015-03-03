@@ -53,7 +53,7 @@
     _g = value;
 }
 
-- (void)setH:(int)value
+- (void)setH:(NSInteger)value
 {
     _h = value;
 }

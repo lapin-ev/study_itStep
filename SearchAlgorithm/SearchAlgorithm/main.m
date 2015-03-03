@@ -17,7 +17,7 @@ int main(int argc, const char *argv[])
         ASnode *start = [ASnode nodeWithPosition:CGPointMake(1, 0)];
         ASnode *finish = [ASnode nodeWithPosition:CGPointMake(7, 9)];
 
-        [myWay findPath:start :finish];
+        [myWay findPath:CGPointMake(1, 0) :CGPointMake(7, 9)];
 
         ASnode *obstacle0 = [ASnode nodeWithPosition:CGPointMake(4, 4)];
         [myWay setObstacle:obstacle0];

@@ -19,7 +19,7 @@
 
 - (void)print;
 
-- (ASnode *)findPath:(ASnode *)nodeA :(ASnode *)nodeB;
+- (ASnode *)findPath:(CGPoint)positionStart :(CGPoint)positionFinish;
 
 - (void)setObstacle:(ASnode *)node;
 

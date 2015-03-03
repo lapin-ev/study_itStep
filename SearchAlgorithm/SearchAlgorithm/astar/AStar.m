@@ -24,7 +24,58 @@
 - (NSUInteger)manhattanHeuristic:(ASnode *)gridCell destinationNode:(ASnode *)destinationNode cost:(NSUInteger)cost
 {
     NSUInteger result;
-    result = (abs((int)gridCell.point.x - (int)destinationNode.point.x) + abs((int)gridCell.point.y - (int)destinationNode.point.y)) * cost;
+    result = (abs((int) gridCell.point.x - (int) destinationNode.point.x) + abs((int) gridCell.point.y - (int) destinationNode.point.y)) * cost;
+    return result;
+}
+
+//todo:review signature
+- (NSMutableArray *)_connectedNodes:(CGPoint)position
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+
+    ASnode *currentNode = _grid[(int)position.x][(int)position.y];
+
+    for (NSInteger x = (NSInteger) position.x - 1; x <= position.x + 1; x++)
+    {
+        for (NSInteger y = (NSInteger) position.y - 1; y <= position.y + 1; y++)
+        {
+            BOOL isCurrentNode = x == position.x && y == position.y;
+
+            //todo: invert and improve
+            if (x > _height || x < 0 || y > _width || y < 0 || isCurrentNode)
+            {
+                continue;
+            }
+            else
+            {
+                ASnode *neighbour = _grid[x][y];
+
+                [neighbour setParent:currentNode];
+                [neighbour setH:[self manhattanHeuristic:neighbour destinationNode:_finishPoint cost:10]];
+
+                if (x == (NSInteger)position.x || y == (NSInteger)position.y)
+                {
+
+                    //   direct way
+                    NSLog(@"direct way");
+                }
+                else
+                {
+                    //   diagonal way
+                }
+
+                [result addObject:neighbour];
+            }
+
+            if (_obstacles.count > 0)
+            {
+                //todo: analize obstacles
+            }
+
+        }
+
+    }
+
     return result;
 }
 
@@ -141,14 +192,38 @@
 }
 
 
-- (ASnode *)findPath:(ASnode *)nodeA :(ASnode *)nodeB
+- (ASnode *)findPath:(CGPoint)positionStart :(CGPoint)positionFinish
 {
     ASnode *result = nil;
 
-    _startPoint = nodeA;
-    _finishPoint = nodeB;
+    NSMutableArray *openList = [[NSMutableArray alloc] init];
+    NSMutableArray *closeList = [[NSMutableArray alloc] init];
+
+    //todo:review
+//    [openList addObject:positionStart];
+
+//    while (currentNode != positionFinish)
+//    {
+    NSMutableArray *goingThroughNodes = [self _connectedNodes:positionStart];
+
+    for (int i = 0; i<goingThroughNodes.count; i++)
+    {
+        NSLog(@"Neighbour %d", i);
+        ASnode *aSnode = [[ASnode alloc] init];
+        aSnode = [goingThroughNodes objectAtIndex:i];
+    }
+
+//    currentNode = positionFinish;
+//    }
+
+//    int i = [self manhattanHeuristic:positionStart destinationNode:positionFinish cost:10];
+//    NSLog(@"%d", i);
+
+   _startPoint = _grid[(int)positionStart.x][(int)positionStart.y];
+   _finishPoint = _grid[(int)positionFinish.x][(int)positionFinish.y];
 
     return result;
 }
+
 
 @end

@@ -26,7 +26,7 @@
 -(void) setG :(int) value;
 
 -(int) h;
--(void) setH :(int) value;
+-(void) setH :(NSInteger) value;
 
 -(ASnode *) parentNode;
 -(void) setParent :(ASnode *) parent;
