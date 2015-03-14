@@ -5,6 +5,25 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="Plp-Xc-A7n">
+            <objects>
+                <viewController id="a7b-xQ-bMP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kTD-Yn-vqe"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYF-BO-U0G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qav-fe-Idg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOZ-gv-4I9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="249"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -41,6 +60,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="fEb-n8-7bH" appends="YES" id="Fh8-SH-Kf9"/>
+                                            <segue destination="a7b-xQ-bMP" kind="show" id="wvp-Vh-pum"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,7 +124,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="fEb-n8-7bH"/>
             </objects>
-            <point key="canvasLocation" x="198" y="345"/>
+            <point key="canvasLocation" x="-185" y="249"/>
         </scene>
     </scenes>
 </document>

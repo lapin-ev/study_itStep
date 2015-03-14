@@ -9,13 +9,22 @@
 #import "ViewController.h"
 #import "LEStudent.h"
 
+#define titleGirls @"girls"
+#define titleBoys @"boys"
+
+
 @interface ViewController ()
 
 {
     
     NSMutableArray* arrayOfStudents;
+    NSMutableArray* arrayOfBoys;
+
+    NSMutableArray* arrayOfGirls;
+
     NSMutableArray* arrayOfFoundItems;
-    BOOL searchDidWell;
+    NSMutableArray * arrayOfTitles;
+    BOOL isSearch;
 }
 
 @end
@@ -51,15 +60,42 @@
     [super viewDidLoad];
     
     arrayOfStudents = [[NSMutableArray alloc] init];
+    arrayOfTitles = [ NSMutableArray arrayWithObjects:titleBoys,titleGirls, nil];
     
-    for (int i=0; i<5; i++)
+    for (int i=0; i<6; i++)
     {
         LEStudent* stud1 = [LEStudent initWith:([NSString stringWithFormat:@"Name%i",i]) andSurname:[NSString stringWithFormat:@"Surname%i",i]];
         [stud1 setAge:[NSNumber numberWithInt:(24+i)]];
+        if (i%2 == 0 )
+        {
+            stud1.sex = H_MALE;
+        }
+        else
+        {
+            stud1.sex = H_FEMALE;
+        }
+        
         NSString * interest = [NSString stringWithFormat:@"Interest%i",i];
         [stud1 setInterests:interest];
         [arrayOfStudents addObject:stud1];
     }
+    
+    arrayOfBoys = [NSMutableArray new];
+    arrayOfGirls = [NSMutableArray new];
+    
+    
+    for (LEStudent* stu in arrayOfStudents)
+    {
+        if (stu.sex == H_MALE)
+        {
+            [arrayOfBoys addObject:stu];
+        }
+        else
+        {
+            [arrayOfGirls addObject:stu];
+        }
+    }
+    
     self.naviTitle.topItem.title = @"Students";
 }
 
@@ -80,44 +116,68 @@
     if (arrayOfFoundItems.count > 0 )
     {
         LEStudent * stud = [arrayOfFoundItems objectAtIndex:indexPath.row];
-        
         cell.textLabel.text = stud.name;
-        cell.detailTextLabel.text = stud.surname;
-        
+        cell.detailTextLabel.text = [stud.surname stringByAppendingString:[NSString stringWithFormat:@" Sex:%i", stud.sex]];
     }
     if (arrayOfStudents.count > 0 && arrayOfFoundItems.count == 0)
     {
         LEStudent * stud = [arrayOfStudents objectAtIndex:indexPath.row];
-        
         cell.textLabel.text = stud.name;
-        cell.detailTextLabel.text = stud.surname;
-        
+        cell.detailTextLabel.text = [stud.surname stringByAppendingString:[NSString stringWithFormat:@" Sex:%i", stud.sex]];
     }
     
+    LEStudent * stu =nil;
+    
+    if (indexPath.section == 0 )
+    {
+        stu =[arrayOfBoys objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        stu =[arrayOfGirls objectAtIndex:indexPath.row];
+    }
+
+    cell.textLabel.text = stu.name;
+    cell.detailTextLabel.text = [stu.surname stringByAppendingString:[NSString stringWithFormat:@" Sex:%i", stu.sex]];
+
     return cell;
 }
 
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+     return [arrayOfTitles objectAtIndex:section];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (searchDidWell)
+
+    if (section == 0 )
     {
-        return [arrayOfFoundItems count];
-    }
-    else if (arrayOfStudents.count > 0)
-    {
-        return [arrayOfStudents count];
+        return arrayOfBoys.count;
     }
     else
     {
-        return 0;
+        return arrayOfGirls.count;
     }
-        
+//    if (isSearch)
+//    {
+//        return [arrayOfFoundItems count];
+//    }
+//    else if (arrayOfStudents.count > 0)
+//    {
+//        return [arrayOfStudents count];
+//    }
+//    else
+//    {
+//        return 0;
+//    }
+    
     //    return [arrayOfStudents count];
 }
 
@@ -129,20 +189,17 @@
 - (IBAction)searchButtonTouchUp:(id)sender {
     if ([self.searchReloadButton.titleLabel.text isEqualToString:@"Search"])
     {
-        searchDidWell = true;
         if ([self searchStudent:self.searchText.text])
         {
             arrayOfFoundItems = [NSMutableArray new];
-            [arrayOfFoundItems addObject: [self searchStudent:self.searchText.text]];
-            [self.myTableView reloadData];
+            [arrayOfFoundItems addObject: [self searchStudent:self.searchText.text]];            
         }
     }
     else
     {
         arrayOfFoundItems = nil;
-        [self.myTableView reloadData];
-        searchDidWell = false;
     }
+    [self.myTableView reloadData];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -152,12 +209,14 @@
     if (string.length == 0 && newString.length ==1)
     {
         [self.searchReloadButton setTitle:@"Display" forState:UIControlStateNormal];
+        isSearch = false;
         return YES;
         
     }
     else
     {
         [self.searchReloadButton setTitle:@"Search" forState:UIControlStateNormal];
+        isSearch = true;
     }
     
     return YES;

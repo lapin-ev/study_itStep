@@ -360,6 +360,7 @@
 				INFOPLIST_FILE = Students/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -370,6 +371,7 @@
 				INFOPLIST_FILE = Students/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -426,6 +428,7 @@
 				FDE2336D1AAF51B20041DD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDE2336E1AAF51B20041DD23 /* Build configuration list for PBXNativeTarget "StudentsTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +437,7 @@
 				FDE233701AAF51B20041DD23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

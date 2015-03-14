@@ -8,12 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    H_MALE ,
+    H_FEMALE
+    
+} HumanSexType;
+
 @interface LEStudent : NSObject
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* surname;
 @property (strong, nonatomic) NSString* interests;
 @property (strong, nonatomic) NSNumber* age;
+@property (nonatomic) HumanSexType sex;
+
 
 +(LEStudent*) initWith : (NSString*) name andSurname : (NSString*)surname;
 
