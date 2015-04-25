@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1F57561AB48ABE0033358F /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1F57551AB48ABE0033358F /* ViewController2.m */; };
+		FD5DE30A1AD6D06F00DB4AA2 /* zelenaja_galochka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD5DE3091AD6D06F00DB4AA2 /* zelenaja_galochka.jpg */; };
+		FD5DE30C1AD6E76D00DB4AA2 /* bright-green-check-mark-md.png in Resources */ = {isa = PBXBuildFile; fileRef = FD5DE30B1AD6E76D00DB4AA2 /* bright-green-check-mark-md.png */; };
+		FD73D2321ABB293600186017 /* StudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73D2311ABB293600186017 /* StudentTableViewCell.m */; };
+		FD73D2361ABB330C00186017 /* SaveMyData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73D2351ABB330C00186017 /* SaveMyData.m */; };
+		FD73D23D1ABF55FB00186017 /* TimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FD73D23C1ABF55FB00186017 /* TimerVC.m */; };
+		FD766A5A1ACD929A0090F0E5 /* LEAlbums.m in Sources */ = {isa = PBXBuildFile; fileRef = FD766A591ACD929A0090F0E5 /* LEAlbums.m */; };
+		FD766A5D1ACDA08A0090F0E5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD766A5C1ACDA08A0090F0E5 /* AssetsLibrary.framework */; };
+		FD766A601ACDB2FA0090F0E5 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD766A5F1ACDB2FA0090F0E5 /* MyCollectionViewCell.m */; };
+		FDA225211AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA225201AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.m */; };
+		FDDFC4561AC1CADF00D5FD75 /* VCWithRandomItems.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDFC4551AC1CADF00D5FD75 /* VCWithRandomItems.m */; };
+		FDDFC45B1AC1E06500D5FD75 /* img_g.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDFC45A1AC1E06500D5FD75 /* img_g.jpg */; };
+		FDDFC45D1AC1E08500D5FD75 /* img_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDDFC45C1AC1E08500D5FD75 /* img_b.jpg */; };
 		FDE2334E1AAF51B20041DD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE2334D1AAF51B20041DD23 /* main.m */; };
 		FDE233511AAF51B20041DD23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE233501AAF51B20041DD23 /* AppDelegate.m */; };
 		FDE233541AAF51B20041DD23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE233531AAF51B20041DD23 /* ViewController.m */; };
@@ -28,6 +41,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD1F57541AB48ABE0033358F /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		FD1F57551AB48ABE0033358F /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		FD5DE3091AD6D06F00DB4AA2 /* zelenaja_galochka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zelenaja_galochka.jpg; sourceTree = "<group>"; };
+		FD5DE30B1AD6E76D00DB4AA2 /* bright-green-check-mark-md.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bright-green-check-mark-md.png"; sourceTree = "<group>"; };
+		FD73D2301ABB293600186017 /* StudentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentTableViewCell.h; sourceTree = "<group>"; };
+		FD73D2311ABB293600186017 /* StudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewCell.m; sourceTree = "<group>"; };
+		FD73D2341ABB330C00186017 /* SaveMyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveMyData.h; sourceTree = "<group>"; };
+		FD73D2351ABB330C00186017 /* SaveMyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveMyData.m; sourceTree = "<group>"; };
+		FD73D23B1ABF55FB00186017 /* TimerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerVC.h; sourceTree = "<group>"; };
+		FD73D23C1ABF55FB00186017 /* TimerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerVC.m; sourceTree = "<group>"; };
+		FD766A581ACD929A0090F0E5 /* LEAlbums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAlbums.h; sourceTree = "<group>"; };
+		FD766A591ACD929A0090F0E5 /* LEAlbums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAlbums.m; sourceTree = "<group>"; };
+		FD766A5C1ACDA08A0090F0E5 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FD766A5E1ACDB2FA0090F0E5 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewCell.h; path = Students/MyCollectionViewCell.h; sourceTree = "<group>"; };
+		FD766A5F1ACDB2FA0090F0E5 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewCell.m; path = Students/MyCollectionViewCell.m; sourceTree = "<group>"; };
+		FDA2251F1AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhotoInAlbumsViewController.h; sourceTree = "<group>"; };
+		FDA225201AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPhotoInAlbumsViewController.m; sourceTree = "<group>"; };
+		FDDFC4541AC1CADF00D5FD75 /* VCWithRandomItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCWithRandomItems.h; sourceTree = "<group>"; };
+		FDDFC4551AC1CADF00D5FD75 /* VCWithRandomItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCWithRandomItems.m; sourceTree = "<group>"; };
+		FDDFC45A1AC1E06500D5FD75 /* img_g.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_g.jpg; sourceTree = "<group>"; };
+		FDDFC45C1AC1E08500D5FD75 /* img_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_b.jpg; sourceTree = "<group>"; };
 		FDE233481AAF51B20041DD23 /* Students.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Students.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE2334C1AAF51B20041DD23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDE2334D1AAF51B20041DD23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD766A5D1ACDA08A0090F0E5 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,11 +98,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD73D22F1ABB289D00186017 /* MyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD1F57541AB48ABE0033358F /* ViewController2.h */,
+				FD1F57551AB48ABE0033358F /* ViewController2.m */,
+			);
+			name = MyViewController;
+			sourceTree = "<group>";
+		};
+		FD73D2331ABB294900186017 /* StudentCell */ = {
+			isa = PBXGroup;
+			children = (
+				FD73D2301ABB293600186017 /* StudentTableViewCell.h */,
+				FD73D2311ABB293600186017 /* StudentTableViewCell.m */,
+			);
+			name = StudentCell;
+			sourceTree = "<group>";
+		};
+		FD73D2371ABB331A00186017 /* SaveMyData */ = {
+			isa = PBXGroup;
+			children = (
+				FD73D2341ABB330C00186017 /* SaveMyData.h */,
+				FD73D2351ABB330C00186017 /* SaveMyData.m */,
+			);
+			name = SaveMyData;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FD73D23E1ABF560200186017 /* TimerVC */ = {
+			isa = PBXGroup;
+			children = (
+				FD73D23B1ABF55FB00186017 /* TimerVC.h */,
+				FD73D23C1ABF55FB00186017 /* TimerVC.m */,
+			);
+			name = TimerVC;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FD766A5B1ACD92A10090F0E5 /* imagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				FD766A581ACD929A0090F0E5 /* LEAlbums.h */,
+				FD766A591ACD929A0090F0E5 /* LEAlbums.m */,
+				FD766A5E1ACDB2FA0090F0E5 /* MyCollectionViewCell.h */,
+				FD766A5F1ACDB2FA0090F0E5 /* MyCollectionViewCell.m */,
+				FDA2251F1AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.h */,
+				FDA225201AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.m */,
+			);
+			name = imagePicker;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FDDFC4571AC1CAE300D5FD75 /* VCWithRandomItems */ = {
+			isa = PBXGroup;
+			children = (
+				FDDFC4541AC1CADF00D5FD75 /* VCWithRandomItems.h */,
+				FDDFC4551AC1CADF00D5FD75 /* VCWithRandomItems.m */,
+			);
+			name = VCWithRandomItems;
+			sourceTree = "<group>";
+		};
 		FDE2333F1AAF51B20041DD23 = {
 			isa = PBXGroup;
 			children = (
 				FDE2334A1AAF51B20041DD23 /* Students */,
 				FDE233641AAF51B20041DD23 /* StudentsTests */,
+				FD766A5C1ACDA08A0090F0E5 /* AssetsLibrary.framework */,
 				FDE233491AAF51B20041DD23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,7 +181,13 @@
 		FDE2334A1AAF51B20041DD23 /* Students */ = {
 			isa = PBXGroup;
 			children = (
+				FD73D2371ABB331A00186017 /* SaveMyData */,
+				FD73D2331ABB294900186017 /* StudentCell */,
+				FD73D22F1ABB289D00186017 /* MyViewController */,
+				FD766A5B1ACD92A10090F0E5 /* imagePicker */,
 				FDE233711AAF51C30041DD23 /* LEStudent */,
+				FD73D23E1ABF560200186017 /* TimerVC */,
+				FDDFC4571AC1CAE300D5FD75 /* VCWithRandomItems */,
 				FDE2334F1AAF51B20041DD23 /* AppDelegate.h */,
 				FDE233501AAF51B20041DD23 /* AppDelegate.m */,
 				FDE233521AAF51B20041DD23 /* ViewController.h */,
@@ -92,6 +195,10 @@
 				FDE233551AAF51B20041DD23 /* Main.storyboard */,
 				FDE233581AAF51B20041DD23 /* Images.xcassets */,
 				FDE2335A1AAF51B20041DD23 /* LaunchScreen.xib */,
+				FD5DE3091AD6D06F00DB4AA2 /* zelenaja_galochka.jpg */,
+				FD5DE30B1AD6E76D00DB4AA2 /* bright-green-check-mark-md.png */,
+				FDDFC45C1AC1E08500D5FD75 /* img_b.jpg */,
+				FDDFC45A1AC1E06500D5FD75 /* img_g.jpg */,
 				FDE2334B1AAF51B20041DD23 /* Supporting Files */,
 			);
 			path = Students;
@@ -212,8 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDFC45D1AC1E08500D5FD75 /* img_b.jpg in Resources */,
+				FD5DE30A1AD6D06F00DB4AA2 /* zelenaja_galochka.jpg in Resources */,
 				FDE233571AAF51B20041DD23 /* Main.storyboard in Resources */,
+				FD5DE30C1AD6E76D00DB4AA2 /* bright-green-check-mark-md.png in Resources */,
 				FDE2335C1AAF51B20041DD23 /* LaunchScreen.xib in Resources */,
+				FDDFC45B1AC1E06500D5FD75 /* img_g.jpg in Resources */,
 				FDE233591AAF51B20041DD23 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,10 +343,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA225211AD42CBD003B82B8 /* MyPhotoInAlbumsViewController.m in Sources */,
 				FDE233541AAF51B20041DD23 /* ViewController.m in Sources */,
+				FD766A601ACDB2FA0090F0E5 /* MyCollectionViewCell.m in Sources */,
+				FD73D2321ABB293600186017 /* StudentTableViewCell.m in Sources */,
 				FDE233511AAF51B20041DD23 /* AppDelegate.m in Sources */,
+				FD1F57561AB48ABE0033358F /* ViewController2.m in Sources */,
 				FDE233741AAF52280041DD23 /* LEStudent.m in Sources */,
 				FDE2334E1AAF51B20041DD23 /* main.m in Sources */,
+				FD766A5A1ACD929A0090F0E5 /* LEAlbums.m in Sources */,
+				FD73D23D1ABF55FB00186017 /* TimerVC.m in Sources */,
+				FD73D2361ABB330C00186017 /* SaveMyData.m in Sources */,
+				FDDFC4561AC1CADF00D5FD75 /* VCWithRandomItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

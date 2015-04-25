@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum
 {
@@ -21,13 +22,18 @@ typedef enum
 @property (strong, nonatomic) NSString* surname;
 @property (strong, nonatomic) NSString* interests;
 @property (strong, nonatomic) NSNumber* age;
-@property (nonatomic) HumanSexType sex;
 
+@property (nonatomic) NSNumber* sex;
+
+@property (nonatomic) UIImage *photo;
 
 +(LEStudent*) initWith : (NSString*) name andSurname : (NSString*)surname;
 
 -(void) setAge:(NSNumber *)age;
 -(void) setInterests:(NSString *)interests;
+
+//-(void) encodedWithCoder:(NSCoder*)encoder;
+//-(id) initWithCoder :(NSCoder*) coder;
 
 
 @end
