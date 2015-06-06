@@ -62,20 +62,21 @@
     NSString * text = [_news objectAtIndex:indexPath.row];
     float height = c_height;
     MyTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    CGFloat cell_heght = cell.frame.size.height;
     
     NSMutableArray *arrViews = [NSMutableArray new];
     for (id object in [cell.contentView subviews]) {
         if ([[object class] isSubclassOfClass:[UILabel class]]) {
             [arrViews addObject:object];
         }
-    }    
+    }
     if (arrViews.count > 0 ){
         for (int i = 0; i < arrViews.count; i++) {
             height = height + [self frameSize:text andLabel:[arrViews objectAtIndex:i]];
-//                NSLog(@"%f",height);
         }
     }
-    return height;
+    
+    return  height;
 }
 
 -(CGFloat) frameSize :(NSString *) text andLabel: (UILabel*) label{
@@ -86,7 +87,7 @@
     if (sv >= 7.f) {
         frame = [text boundingRectWithSize:CGSizeMake(label.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil];
     }
-
+    
     return frame.size.height;
 }
 

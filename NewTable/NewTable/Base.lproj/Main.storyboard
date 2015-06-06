@@ -27,24 +27,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" tableViewCell="Amw-6G-NE3" id="rlL-YG-9cM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mario_SM3DW.png" translatesAutoresizingMaskIntoConstraints="NO" id="lOD-x2-KZw">
-                                                    <rect key="frame" x="212" y="42" width="88" height="85"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="b3K-TJ-Hsd"/>
-                                                        <constraint firstAttribute="height" constant="85" id="zdR-kq-brG"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9F-rd-aJX">
-                                                    <rect key="frame" x="8" y="140" width="218" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="218" id="V5L-bh-vzB"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEP-g6-4bj">
-                                                    <rect key="frame" x="4" y="16" width="312" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEP-g6-4bj">
+                                                    <rect key="frame" x="4" y="16" width="312" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="312" id="Yh1-6E-pAb"/>
                                                     </constraints>
@@ -52,15 +36,31 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9F-rd-aJX">
+                                                    <rect key="frame" x="8" y="143" width="218" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="218" id="V5L-bh-vzB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mario_SM3DW.png" translatesAutoresizingMaskIntoConstraints="NO" id="lOD-x2-KZw">
+                                                    <rect key="frame" x="224" y="42" width="88" height="85"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="b3K-TJ-Hsd"/>
+                                                        <constraint firstAttribute="height" constant="85" id="zdR-kq-brG"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lOD-x2-KZw" secondAttribute="trailing" id="7Wl-Bx-Z7j"/>
                                                 <constraint firstItem="ZEP-g6-4bj" firstAttribute="top" secondItem="rlL-YG-9cM" secondAttribute="topMargin" constant="8" id="K3H-vA-mPX"/>
                                                 <constraint firstAttribute="centerY" secondItem="lOD-x2-KZw" secondAttribute="centerY" id="N4V-Ze-LBJ"/>
                                                 <constraint firstItem="U9F-rd-aJX" firstAttribute="leading" secondItem="rlL-YG-9cM" secondAttribute="leadingMargin" id="Tut-Ag-ond"/>
                                                 <constraint firstItem="ZEP-g6-4bj" firstAttribute="leading" secondItem="rlL-YG-9cM" secondAttribute="leadingMargin" constant="-4" id="V6S-MI-31a"/>
                                                 <constraint firstItem="U9F-rd-aJX" firstAttribute="bottom" secondItem="rlL-YG-9cM" secondAttribute="bottomMargin" id="VFL-7h-0Vq"/>
                                                 <constraint firstItem="ZEP-g6-4bj" firstAttribute="top" secondItem="rlL-YG-9cM" secondAttribute="topMargin" constant="8" id="eAw-ER-HMC"/>
-                                                <constraint firstAttribute="centerX" secondItem="lOD-x2-KZw" secondAttribute="centerX" id="qTk-ds-gId"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
