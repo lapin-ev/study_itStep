@@ -165,7 +165,7 @@
 
 - (IBAction)segmentedControlValueChange:(UISegmentedControl *)sender {
 
-    NSLog(@"%i", [self.mySegmentedControll selectedSegmentIndex]);
+    NSLog(@"%li", (long)[self.mySegmentedControll selectedSegmentIndex]);
     
     if ([_mySegmentedControll selectedSegmentIndex] == 0) {
         [_mySegmentedControll setTitle:@"double" forSegmentAtIndex:0];

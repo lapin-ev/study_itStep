@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface VC2 : UIViewController
+@interface VC2 : ViewController
+
 - (IBAction)backButtonPress:(UIBarButtonItem *)sender;
+
 
 @end

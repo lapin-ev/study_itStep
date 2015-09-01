@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(getEnteredText)
+                                                 name:@"getEnteredText"
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void) getEnteredText {
+    self.labelEnteredText.text = self.myAlert.text.text;
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -35,6 +44,7 @@
 */
 
 - (IBAction)backButtonPress:(UIBarButtonItem *)sender {
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

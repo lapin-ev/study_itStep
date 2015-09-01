@@ -8,12 +8,10 @@
 
 #import "ViewController.h"
 #import "VC2.h"
-
 #import "MyAlertView.h"
 
 @interface ViewController () <UINavigationControllerDelegate>
 
-@property MyAlertView *myAlert;
 
 @end
 
@@ -22,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(getEnteredText)
+                                                 name:@"getEnteredText"
+                                               object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,16 +33,33 @@
 }
 
 - (IBAction)forwardButtonPress:(UIBarButtonItem *)sender {
-    
    VC2 *detailObject = [self.storyboard instantiateViewControllerWithIdentifier:@"vc2"];
-//    
-//    detailObject.albumName = [[tableView cellForRowAtIndexPath:indexPath] textLabel].text;
-//    //    [self presentViewController:detailObject animated:YES completion:nil];
    [self.navigationController pushViewController:detailObject animated:YES];
 }
 
 - (IBAction)showAlert:(UIButton *)sender {
-    self.myAlert = [MyAlertView initWithXib];
-    [self.view addSubview:self.myAlert];
+    
+    if (!self.myAlert) {
+        self.myAlert = [MyAlertView initWithXib : self.view];
+        
+        [self.navigationController.view addSubview:self.myAlert];
+        [self.myAlert smoothAlpha:1 delay:0.5 option:0];
+
+
+    } else {
+        [self.myAlert smoothAlpha:1 delay:1 option:0];
+    }
 }
+
+-(void) getEnteredText {
+ 
+    
+    self.labelEnteredText.text = self.myAlert.text.text;
+    
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"getEnteredText" object:nil];
+}
+
 @end

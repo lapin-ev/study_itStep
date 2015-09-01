@@ -14,8 +14,14 @@
 @property (weak)  IBOutlet UIButton * buttonOk;
 @property (weak)  IBOutlet UIButton * buttonCancel;
 @property (weak)  IBOutlet UITextField * text;
+@property (weak, nonatomic) IBOutlet UIView *alertBackround;
 
 
-+ (MyAlertView *)initWithXib;
++ (MyAlertView *)initWithXib : (UIView*) view;
+
+-(void)smoothAlpha:(float) alpha delay: (float)secs option:(UIViewAnimationOptions)option;
+
+- (IBAction)doCancelAlert:(UIButton *)sender;
+- (IBAction)doOkButton:(UIButton *)sender;
 
 @end

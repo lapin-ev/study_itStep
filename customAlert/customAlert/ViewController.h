@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyAlertView.h"
 
 @interface ViewController : UIViewController
+
+@property MyAlertView *myAlert;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelEnteredText;
 - (IBAction)forwardButtonPress:(UIBarButtonItem *)sender;
 
 - (IBAction)showAlert:(UIButton *)sender;
