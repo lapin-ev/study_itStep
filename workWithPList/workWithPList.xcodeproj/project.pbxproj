@@ -59,6 +59,7 @@
 		FD1405331B919128001619D9 /* myObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myObject.m; sourceTree = "<group>"; };
 		FD1405351B91A88C001619D9 /* NSObject+myMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+myMethods.h"; sourceTree = "<group>"; };
 		FD1405361B91A88C001619D9 /* NSObject+myMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+myMethods.m"; sourceTree = "<group>"; };
+		FDD762F61B98BCF100946CDE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 				FD1405011B918304001619D9 /* AppDelegate.m */,
 				FD1405031B918304001619D9 /* ViewController.h */,
 				FD1405041B918304001619D9 /* ViewController.m */,
+				FDD762F61B98BCF100946CDE /* PrefixHeader.pch */,
 				FD1405061B918304001619D9 /* Main.storyboard */,
 				FD1405091B918304001619D9 /* Assets.xcassets */,
 				FD14050B1B918304001619D9 /* LaunchScreen.storyboard */,
@@ -430,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = workWithPList/PrefixHeader.pch;
 				INFOPLIST_FILE = workWithPList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEV.workWithPList;
@@ -441,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = workWithPList/PrefixHeader.pch;
 				INFOPLIST_FILE = workWithPList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LEV.workWithPList;
@@ -515,6 +519,7 @@
 				FD1405291B918304001619D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD14052A1B918304001619D9 /* Build configuration list for PBXNativeTarget "workWithPListTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				FD14052C1B918304001619D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD14052D1B918304001619D9 /* Build configuration list for PBXNativeTarget "workWithPListUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				FD14052F1B918304001619D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

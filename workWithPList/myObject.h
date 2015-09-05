@@ -17,5 +17,7 @@
 @property (nonatomic) NSString * name;
 @property (nonatomic) NSDate * dtOfBirth;
 
++ (myObject*)sharedInstance;
+
 
 @end
