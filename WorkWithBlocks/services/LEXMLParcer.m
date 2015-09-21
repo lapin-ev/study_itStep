@@ -49,6 +49,7 @@ static NSString* kItemElementName = @"item";
 }
 
 - (LEXMLParcer*)initWithUrl:(NSURL*)url {
+    _url = url;
 
     return self;
 }
@@ -56,7 +57,7 @@ static NSString* kItemElementName = @"item";
 # pragma mark NSXMLParcer Delegat
 
 -(void)parserDidStartDocument:(NSXMLParser *)parser {
-    
+    NSLog(@"started");
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName attributes:(NSDictionary<NSString *, NSString *> *)attributeDict{

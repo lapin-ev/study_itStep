@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RequestComplitionBlock) (id * result, NSError * error) ;
+typedef void (^RequestComplitionBlock) (id result, NSError * error) ;
 
 
 @interface RequestManager : NSObject

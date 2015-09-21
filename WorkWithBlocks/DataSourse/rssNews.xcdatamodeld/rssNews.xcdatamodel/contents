@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="LENewsModel" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="15A279b" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="LENewsModel" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9048" systemVersion="15A282a" minimumToolsVersion="Xcode 7.0">
     <entity name="LENewsModel" representedClassName="LENewsModel" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -8,6 +8,6 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="LENewsModel" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="LENewsModel" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

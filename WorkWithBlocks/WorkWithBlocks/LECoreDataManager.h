@@ -12,6 +12,7 @@
 @interface LECoreDataManager : NSObject
 
 +(LECoreDataManager*) sharedManager;
+
 - (LENewsModel*) newObjectWithTitle : (NSString*) title
                        category:(NSString*) category
                            link:(NSURL*) link
@@ -19,5 +20,7 @@
                 descriptionText:(NSString*) descriptionText;
 
 -(NSArray *) saveModelsArray : (NSArray*) arrayOfModels;
+
+- (void) saveContext;
 
 @end

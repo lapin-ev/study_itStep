@@ -7,13 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "LEXMLParcer.h"
 #import "LENewsModel.h"
+#import "RequestManager.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) LEXMLParcer * parcer;
 @property (nonatomic, strong) NSArray * newsItems;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
@@ -32,30 +33,31 @@
 //    NSLog(@"%d",i);
     
     NSURL * url = [NSURL URLWithString:@"http://funzoo.ru/rss.xml"];
-    self.parcer = [LEXMLParcer parceWithUrl:url];
-    
     __block ViewController* weakSelf = self;// avoid retain circle
-
-    [self.parcer parceNewItemsWithComplition:
-     ^(NSArray* itemsArray) {
-    
-         NSMutableArray * tmpNewsArray = [NSMutableArray array];
-         for (NSDictionary * dict in itemsArray) {
-             LENewsModel * newsModel = [LENewsModel modelFromDictionary:dict];
-             [tmpNewsArray addObject:newsModel];
-         }
-         
-        weakSelf.newsItems = tmpNewsArray;
-         
+    [RequestManager loadAndSaveModelWithURL:url complition:^(id result, NSError * error) {
+        if (!error) {
+            weakSelf.newsItems = result;
+            [weakSelf.tableView reloadData];
+        }
     }];
-    
-
-    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark TableView delegates
+//
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    LENewsModel * model = self.newsItems[indexPath.row];
+    cell.textLabel.text = model.title;
+    cell.detailTextLabel.text = model.descriptionText;
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.newsItems count];
 }
 
 @end

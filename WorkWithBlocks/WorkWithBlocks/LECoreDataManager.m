@@ -21,7 +21,7 @@
 
 + (LECoreDataManager *)sharedManager {
     static LECoreDataManager * sharedManagerObject ;
-    static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken = 0;
     
     dispatch_once(&onceToken, ^{
         
@@ -34,9 +34,9 @@
 }
 
 
-+ (instancetype)allocWithZone:(struct _NSZone *)zone {
-    return [LECoreDataManager sharedManager];
-}
+//+ (instancetype)allocWithZone:(struct _NSZone *)zone {
+//    return [LECoreDataManager sharedManager];
+//}
 
 -(id)copy {
     return [LECoreDataManager sharedManager];
@@ -51,6 +51,7 @@
 - (NSManagedObjectContext* ) defaultContext {
     if (!_defaultContext) {
         _defaultContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        _defaultContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     }
     return _defaultContext;
 }
