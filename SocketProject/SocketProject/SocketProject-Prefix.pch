@@ -1,0 +1,65 @@
+//
+//  SocketProject-Prefix.pch
+//  SocketProject
+//
+//  Created by Genrih Korenujenko on 07.10.15.
+//  Copyright © 2015 Genrih Korenujenko. All rights reserved.
+//
+
+
+#ifndef SocketProject_Prefix_pch
+
+#import <Foundation/Foundation.h>
+
+static NSString *headerUserID = @"userid";
+static NSString *headerSessionHash = @"usersessionhash";
+
+static NSString *urlServer = @"http://dev.join2city.com.ua/api/";
+
+static NSString *registrationPath = @"registration";
+static NSString *loginPath = @"login";
+static NSString *userProfilePath = @"user/profile";
+
+#define STRINGFORMATING(text1, text2) \
+[NSString stringWithFormat:@"%@%@", text1, text2]
+
+#define PRINTJSON(json, keyDic) \
+[[json valueForKey:keyDic] enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { PRINTOBJECTS(obj, key, keyDic) }];
+
+#define PRINTOBJECTS(obj, key, keyDic) \
+NSLog(@"%@: %@ - %@", keyDic, key, obj);
+
+#define PARSINGANSWER(data, key) \
+if (data) { NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]; if ([d valueForKey:key] && [[[d valueForKey:key] class] isSubclassOfClass:[NSDictionary class]]) { PRINTJSON(d, key) } else { NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]; NSLog(@"Unknown: %@", s); } }
+
+#define GETTEXTERROR(data) \
+[NSString stringWithFormat:@"%@", GETLASTOBJECT(data)];
+
+#define GETLASTOBJECT(data) \
+[[(NSDictionary *)[[NSJSONSerialization JSONObjectWithData:data options:0 error:nil] valueForKey:@"errors"] allValues] lastObject]
+
+#define keyDeviceToken @"deviceToken"
+#define getDeviceToken [[NSUserDefaults standardUserDefaults] stringForKey:keyDeviceToken]
+
+#define keyUser_id @"user_id"
+#define getUser_id [[NSUserDefaults standardUserDefaults] stringForKey:keyUser_id]
+
+#define keyUser_session_hash @"user_session_hash"
+#define getUser_session_hash [[NSUserDefaults standardUserDefaults] stringForKey:keyUser_session_hash]
+
+
+#import <AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
+#import <MBProgressHUD.h>
+
+#import "NSObject+SPValidator.h"
+#import "SPDateKeyboardVC.h"
+
+#define SocketProject_Prefix_pch
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* SocketProject_Prefix_pch */
